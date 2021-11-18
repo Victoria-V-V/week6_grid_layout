@@ -1,0 +1,87 @@
+body {
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.header {
+    background-color: rgb(212, 212, 212);
+    grid-area: hd;
+    line-height: 14vh;
+}
+
+.main {
+    background-color: rgb(255, 248, 227);
+    grid-area: main;
+}
+
+.content {
+    height: 30%;
+    line-height: 14vh;
+}
+
+.main_container {
+    height: 70%;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 10px;
+
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "main_s_1 main_s_2"
+        "main_s_3 main_s_3";
+}
+
+main>section {
+    background-color: rgb(254, 234, 185);
+    line-height: 20vh;
+}
+
+.main_section_1 {
+    grid-area: main_s_1;
+}
+
+.main_section_2 {
+    grid-area: main_s_2;
+}
+
+.main_section_3 {
+    grid-area: main_s_3;
+}
+
+.aside {
+    background-color: rgb(221, 236, 203);
+    grid-area: sd;
+    line-height: 14vh;
+}
+
+.footer {
+    background-color: rgb(212, 212, 212);
+    grid-area: ft;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+footer>section {
+    background-color: rgb(255, 255, 255);
+    line-height: 20vh;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 33.2%;
+    grid-template-rows: 14vh 1fr 26vh;
+    grid-template-areas:
+        "hd hd"
+        "main sd"
+        "ft ft";
+}
