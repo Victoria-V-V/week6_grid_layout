@@ -6,82 +6,72 @@ body {
 }
 
 .header {
-    background-color: rgb(212, 212, 212);
     grid-area: hd;
     line-height: 14vh;
+    background-color: rgb(212, 212, 212);
 }
 
 .main {
-    background-color: rgb(255, 248, 227);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-around;
     grid-area: main;
+    /* padding: 10px; */
+    line-height: 20vh;
+    background-color: rgb(255, 248, 227);
+    /* gap: 10px; */
+
 }
 
 .content {
-    height: 30%;
-    line-height: 14vh;
+    grid-area: 1/1/2/3;
 }
 
-.main_container {
-    height: 70%;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 10px;
+.main_section_1 {
+    grid-area: 2/1/3/2;
+}
 
-    display: grid;
+.main_section_2 {
+    grid-area: 2/2/3/3;
+}
 
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "main_s_1 main_s_2"
-        "main_s_3 main_s_3";
+.main_section_3 {
+    grid-area: 3/1/4/3;
 }
 
 main>section {
     background-color: rgb(254, 234, 185);
-    line-height: 20vh;
-}
-
-.main_section_1 {
-    grid-area: main_s_1;
-}
-
-.main_section_2 {
-    grid-area: main_s_2;
-}
-
-.main_section_3 {
-    grid-area: main_s_3;
 }
 
 .aside {
-    background-color: rgb(221, 236, 203);
     grid-area: sd;
     line-height: 14vh;
+    background-color: rgb(221, 236, 203);
 }
 
 .footer {
-    background-color: rgb(212, 212, 212);
     grid-area: ft;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 10px;
+    background-color: rgb(212, 212, 212);
 }
 
 footer>section {
-    background-color: rgb(255, 255, 255);
     line-height: 20vh;
+    background-color: rgb(255, 255, 255);
 }
 
 .container {
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 33.2%;
-    grid-template-rows: 14vh 1fr 26vh;
+    grid-template-rows: 14vh 60vh 26vh;
     grid-template-areas:
         "hd hd"
         "main sd"
         "ft ft";
+    height: 100vh;
 }
